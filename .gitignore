@@ -20,7 +20,6 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
-_not_needed/
 
 # Virtual environments
 venv/
@@ -32,7 +31,6 @@ myenv/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
 
 # pyenv
 .python-version
@@ -59,12 +57,9 @@ Thumbs.db
 # Logs
 *.log
 
-# Old Flask files (keeping for reference)
-server/myenv/
-bhp.conf
-client/
 
-# Data files
+
+# Data files (large datasets)
 *.csv
 *.xlsx
 *.xls
@@ -81,16 +76,14 @@ client/
 .cache/
 *.cache
 
-# Coverage reports
-htmlcov/
+# Testing
+.pytest_cache/
 .coverage
 .coverage.*
 coverage.xml
+htmlcov/
 
-# pytest
-.pytest_cache/
-
-# mypy
+# Type checking
 .mypy_cache/
 .dmypy.json
 dmypy.json
