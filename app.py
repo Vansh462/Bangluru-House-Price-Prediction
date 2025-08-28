@@ -68,9 +68,48 @@ def main():
     
     # App header
     st.title("🏠 Bangalore House Price Predictor")
+
+    # Add GitHub link in header
+    col_title, col_github = st.columns([3, 1])
+    with col_github:
+        st.markdown("""
+        <div style='text-align: right; padding-top: 10px;'>
+            <a href="https://github.com/Vansh462/Bangluru-House-Price-Prediction" target="_blank">
+                <img src="https://img.shields.io/badge/GitHub-View%20Code-black?style=for-the-badge&logo=github" alt="GitHub">
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
+
     st.markdown("---")
     st.markdown("### Predict house prices in Bangalore based on location, size, and amenities")
-    
+
+    # Sidebar with additional info
+    with st.sidebar:
+        st.header("📋 About This App")
+        st.markdown("""
+        This ML model predicts house prices in Bangalore using:
+        - **Linear Regression** algorithm
+        - **13K+ property records** (cleaned dataset)
+        - **85%+ accuracy** on test data
+        """)
+
+        st.markdown("---")
+        st.header("🔗 Links")
+        st.markdown("""
+        [![GitHub](https://img.shields.io/badge/GitHub-View%20Code-black?style=flat-square&logo=github)](https://github.com/Vansh462/Bangluru-House-Price-Prediction)
+
+        [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-blue?style=flat-square&logo=vercel)](https://portfolio-vob.vercel.app/)
+        """)
+
+        st.markdown("---")
+        st.header("📊 Model Info")
+        st.markdown("""
+        - **Algorithm**: Linear Regression
+        - **Features**: Location, Area, BHK, Bathrooms
+        - **Dataset**: Bangalore Housing Data
+        - **Preprocessing**: Outlier removal, feature engineering
+        """)
+
     # Create two columns for layout
     col1, col2 = st.columns([2, 1])
     
@@ -164,7 +203,14 @@ def main():
     st.markdown("---")
     st.markdown("""
     <div style='text-align: center'>
-        <p>Built with ❤️ using Streamlit | Data Science Project</p>
+        <p>Built with ❤️ using Streamlit |
+        <a href="https://github.com/Vansh462/Bangluru-House-Price-Prediction" target="_blank" style="text-decoration: none;">
+            🔗 View Source Code
+        </a>
+        </p>
+        <p style='font-size: 12px; color: #666;'>
+            Machine Learning Project | Bangalore House Price Prediction
+        </p>
     </div>
     """, unsafe_allow_html=True)
 
